@@ -5,6 +5,16 @@ import math
 """
 Script for MMA optimisation
 
+Version June 2022
+
+Luis Santos <pinhosl3@lsbu.ac.uk>
+School of Buil Environment and Architecture
+London South Bank University 
+London, UK
+
+This script was implemented in Python from the original MATLAB files kindly
+provided by Krister Svanberg <krille@math.kth.se>
+
 For Python users, note that the constraints have to be of the type <=0, unlike 
 what is usually done in scipy
 
@@ -19,7 +29,6 @@ MMA_init initializes the process:
         Optimal value of Objective Function
         Value of variables
         Value of constraints
-
 """
 
 

@@ -3,19 +3,42 @@ import os
 import Fourierfunctions as Ff
 import matplotlib.pyplot as plt
 
+"""
+Script for Calculating bending of simply supported plates using double 
+Fourier series 
 
+Version June 2022
+
+Luis Santos <pinhosl3@lsbu.ac.uk>
+School of Buil Environment and Architecture
+London South Bank University 
+London, UK
+
+This script was developed for presentation only. Convergence of the results 
+are considered for all points simultaneoursly to generate smooth images. 
+For a faster script, convergence should be considered point-by-point.
+
+
+*** Input:
+    Geometry
+    Mesh
+    Load conditions 
+*** Output:
+    Design Internal Forces
+"""
 
 #%% CALCULATE THE PANEL USING DOUBLE FOURRIER SERIES
 
 L = 5400
 W = 9000
-dlx = int(30*1.5)
-dly = int(50*1.5)
+dlx = int(30*1.5) # number of elements in X
+dly = int(50*1.5) # number of elements in Y
 
 D = 1
 Sx = 1
 Sy = 1
 
+# 5.4x9.0 Model in chapter 3 - each load is calculated seperately
 K1 = Ff.FULLPlate_Fourier_UDL_v3(L,W,dlx,dly,0.02)
 K2 = Ff.FULLPlate_Fourier_CL_v2(L,W,dlx,dly,975,975,450,450,2)
 K3 = Ff.FULLPlate_Fourier_CL_v2(L,W,dlx,dly,4500,2700,3000,300,1.5)

@@ -3,6 +3,24 @@ import math
 import os
 import matplotlib.pyplot as plt
 
+
+"""
+Script for Calculating bending of simply supported plates using double 
+Fourier series 
+
+Version June 2022
+
+Luis Santos <pinhosl3@lsbu.ac.uk>
+School of Buil Environment and Architecture
+London South Bank University 
+London, UK
+
+This script was developed for presentation only. Convergence of the results 
+are considered for all points simultaneoursly to generate smooth images. 
+For a faster script, convergence should be considered point-by-point.
+"""
+
+
 def CombineMoments_vonMises(Mx,My,Mxy):
     
     FOURRIER_Med = np.zeros((np.size(Mx,0),np.size(Mx,1)))
